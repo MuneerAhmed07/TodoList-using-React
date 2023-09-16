@@ -1,38 +1,105 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+  overflow-x: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+body {
   min-height: 100vh;
+  padding: 100px 0;
+  background: #000;
+}
+
+.App {
+  width: 500px;
+  padding: 20px;
+  background: #979794;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
+.todoWrapper {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  background: #fff;
+  padding: 25px 20px;
+  border-radius: 5px;
+}
+
+h1 {
+  padding-bottom: 20px;
+  font-size: 24px;
+}
+
+.TodoForm {
+  width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+
+.todo-input {
+  background: #f7f7f7;
+  border: none;
+  outline: none;
+  padding: 10px;
+  width: 75%;
+  border: 1px solid #ccc;
+}
+
+.todo-btn {
+  width: 25%;
+  border: none;
+  background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #fff;
+  font-weight: bold;
+  padding: 10px;
+  cursor: pointer;
+}
+
+
+.Todo {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  border-radius: 3px;
+  padding: 10px;
+  margin-bottom: 15px;
+  color: #fff;
+  font-size: 18px;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+  font-weight: bold;
 }
 
-.App-link {
-  color: #61dafb;
+.Todo:nth-child(even) {
+  background-image: linear-gradient(to right, #a18cd1 0%, #fbc2eb 100%);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Todo:nth-child(odd) {
+  background-image: linear-gradient(to left, #fbc2eb 0%, #a6c1ee 100%);
+}
+
+.icons {
+  display: flex;
+  column-gap: 10px;
+}
+
+.icons .icon {
+  cursor: pointer;
+  transition: .3s ease-in-out;
+}
+
+.icons .icon:hover {
+  color: red;
+}
+
+
+.completed {
+  text-decoration: line-through;
+  color: #000;
 }
